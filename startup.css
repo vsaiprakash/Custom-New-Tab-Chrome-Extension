@@ -1,0 +1,65 @@
+.button {
+    background-color: transparent;
+    border: none;
+    /*color: white;*/
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    /*display: inline-block;*/
+    font-size: 16px;
+    /*margin: 4px 2px;*/
+    cursor: pointer;
+    
+}
+
+.greetings{
+  float:left;
+  padding: 15px 32px;
+  font-weight:bold;
+  text-align: left;
+  font-size: 16px;
+}
+
+.body{
+  padding: 15px;
+  margin: 0 0 10px;
+  border: 0;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  box-sizing: border-box;
+}
+
+#time{
+  float:right;
+  padding: 15px 32px;
+  font-weight:bold;
+  text-align: right;
+  font-size: 16px;
+}
+
+#settings,#backToHome{
+  position: fixed;
+    left: 0px;
+    bottom:0px;
+    margin: 1px 2px;
+    
+}
+
+/*#settings:hover{*/
+/*  height: "42";*/
+/*  width: "42";*/
+/*}*/
+
+#companyLogo{
+  position: fixed;
+    right:0px;
+    bottom:0px;
+    margin: 1px 2px;
+}
+
+body {
+    /*background-image: url("wallpaper.jpg");*/
+    background-color: #f1f1f1;
+    display:flex;
+    flex-flow:column wrap;
+}
