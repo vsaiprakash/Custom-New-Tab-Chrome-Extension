@@ -1,7 +1,7 @@
 var DivTime = document.getElementById('time');
       
       
-var timeUpdater = function fn(){  
+var timeUpdater = function (){  
   var currentTime = new Date();
   var PMflag = false;
   var timeString;
@@ -33,13 +33,27 @@ var timeUpdater = function fn(){
   
 }; 
     
+var userNameLoader = function (){
+  // StorageArea.get(userName,function(userName){
+  //   document.getElementById("username").innerHTML=username.toString();
+  // });
+  
+  
+  
+  if (localStorage.getItem("userName") === null) {
+    document.getElementById("username").innerHTML = "Guest";
+  }
+  
+  //Using Local storage (HTML5) for issue of asynchronous update of username
+  document.getElementById("username").innerHTML = localStorage["userName"];
+  
+  
+  // chrome.storage.sync.get('userName', function(userName) {
+  //     document.getElementById("username").innerHTML = userName;
+  //   });
+};    
 window.onload = timeUpdater;
+window.onload = userNameLoader;
       
 window.setInterval(timeUpdater, 1000);
 
-
-function getValue(){
-  var retVal = prompt("Enter your name : ", "your name here");
-  alert(retVal);
-  
-}
