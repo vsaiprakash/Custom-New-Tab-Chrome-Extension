@@ -1,14 +1,16 @@
 var DivTime = document.getElementById('time');
+var GreetingString = document.getElementById('greet');  
+  
+var currentTime = new Date();
+var PMflag = false;
       
-      
+var hour = currentTime.getHours();
+var min  = currentTime.getMinutes();
+var sec  = currentTime.getSeconds();  
+   
 var timeUpdater = function (){  
-  var currentTime = new Date();
-  var PMflag = false;
+  
   var timeString;
-      
-  hour = currentTime.getHours();
-  min  = currentTime.getMinutes();
-  sec  = currentTime.getSeconds();
   
   if(hour >= 12){
     PMflag = true;
@@ -19,14 +21,17 @@ var timeUpdater = function (){
   if(hour === 0){
     PMflag = false;
     hour = 12;
-  }
+  }//hour is modified
+  
   
   timeString = ""+hour+":"+min; 
   
   if(PMflag===true){
-    timeString = timeString + " PM";  
+    timeString = timeString + " PM";
+    greetingUpdater(hour,!PMflag);
   }else{
     timeString = timeString + " AM";
+    greetingUpdater(hour,!PMflag);
   }
   
   DivTime.innerHTML = timeString;
@@ -51,7 +56,19 @@ var userNameLoader = function (){
   // chrome.storage.sync.get('userName', function(userName) {
   //     document.getElementById("username").innerHTML = userName;
   //   });
-};    
+};
+
+var greetingUpdater = function(hour,isAM){
+  if(isAM){
+    GreetingString.innerHTML = "Good Morning ";
+  }
+  else if(hour <= 6){
+    GreetingString.innerHTML = "Good Afternoon ";
+  }
+  else{
+    GreetingString.innerHTML = "Good Evening ";
+  }
+};
 window.onload = timeUpdater;
 window.onload = userNameLoader;
       
