@@ -58,8 +58,8 @@
 }
 
 body {
-    /*background-image: url("wallpaper.jpg");*/
-    background-color: #f1f1f1;
+    background-image: url("vintage_lite-wallpaper-1920x1200.jpg");
+    /*background-color: #f1f1f1;*/
     display:flex;
     flex-flow:column wrap;
 }
