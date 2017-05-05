@@ -9,4 +9,9 @@ I shows time with a message:-
   
   "Good Evening" if time is between 12:00PM to 6:00PM
   
+  "Good Night" if none of above conditions met.
   
+It has a settings button at bottom left. Using this user can add his/her name.
+This makes the message more personalised with user's name. Example:- Good Morning Sai!
+
+It has a logo I previously used for my blog.
